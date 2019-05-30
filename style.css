@@ -1,0 +1,83 @@
+body{background-color:#68e696;
+    font-weight:lighter;
+    user-select:none;
+    }
+.player{position:absolute ;
+    left:0px;
+    border:10px solid white;}
+.left,.right{position:absolute ;
+    border:3px solid white;
+    background-color:transparent;
+    color:white;}
+.left{border-radius:15px 2px 2px 15px;}
+.right{border-radius:2px 15px 15px 2px;}
+.droparea{position:absolute ;
+    left:0px;
+    top:0px;}
+.colors p{color:white;
+    opacity:0;}
+.drop{position:absolute ;
+    color:#4fff90;
+    font-weight:bold;
+    text-shadow:0px 0px 5px white;}
+.down{position:absolute ;
+    color:#4fff90;
+    font-weight:bold;
+    text-shadow:0px 0px 5px white;}
+.start{position:absolute ; 
+    top:0px;
+    left:0px;}
+.start::children{position:absolute;}
+.startbutton,.colorcon,.redcon,.bluecon,.greencon,.diffcon,.scorecon{position:absolute;
+    color:white;
+    background:rgb(200,200,200,0.3);
+    border:2px solid white;
+    opacity:0;
+    cursor:pointer;}
+.score{position:absolute ;
+    top:0px;
+    right:0px;
+    color:white;
+    text-align:right;} 
+.lastscore,.highscore,.color,.startbuttcon,.diff{
+    position:absolute;
+    color:white;
+    text-align:center;
+    opacity:0;} 
+.okcon1,.ok1,.red,.green,.blue,.easy,.medium,.hard,.ok2,.okcon2{position:absolute;
+    z-index:9;
+    text-align:center;}
+.greencon{background-color:#68e696;
+    border:2px solid #EEEEEE;
+    border-radius:3px;
+    cursor:pointer;}
+.redcon{background-color:#F96969;
+    border:2px solid #EEEEEE;
+    border-radius:3px;
+    cursor:pointer;}
+.bluecon{background-color:#65ace6;
+    border:2px solid #EEEEEE;
+    border-radius:3px;
+    cursor:pointer;}
+.okcon1,.okcon2{background-color:#268BFB;
+    border:2px solid #EEEEEE;
+    border-radius:5px;
+    cursor:pointer;}
+.choosecol,.choosediff{position:absolute;
+    background-color:white;
+    border:2px solid #DEDEDE;
+    border-radius:4px;
+    z-index:5;
+    color:white;}
+.easycon,.mediumcon,.hardcon{position:absolute;
+    border:2px solid #EEEEEE;
+    border-radius:3px;
+    cursor:pointer;}
+.easycon{background-color:#02BA77;}
+.mediumcon{background-color:#fc8b4e;}
+.hardcon{background-color:#f5474d;}
+.info{position:absolute ;
+    bottom:0px;
+    left:0px;
+    text-align:center;
+    color:white;}
