@@ -15,7 +15,7 @@ let red = new Array("bf4c4c","d99797","ec3434","cc5252","e33030");
 let col = green;
 let highscore = 0;
 window.onload = function (){
-    alert("Thank you all so for over 300 upvotes!! Never thought it would get that big!")
+    alert("Thank you all so for over 300 upvotes!! Never thought it would get that big!");
     $(".choosecol,.choosediff").hide();
     $(".drop").css({"left":(inwi/5)});
     $(".down").css({"left":(inwi/2)});
@@ -96,9 +96,9 @@ $(function(){
         intervaltime = 110;    
     });
     $(".redcon,.bluecon,.greencon,.easycon,.mediumcon,.hardcon").click(function (){
-        $(this).animate({width: '+='+inwi/1.5/3*2/8,left : '-='+inwi/1.5/3*2/8/2},55);
+        $(this).animate({width: "+="+inwi/1.5/3*2/8,left : "-="+inwi/1.5/3*2/8/2},55);
         $(this).animate({width:inwi/1.5/3*2,left :inwi/2/4-2},55);
-        $(this).children().animate({width: '+='+inwi/1.5/3*2/8},55);
+        $(this).children().animate({width: "+="+inwi/1.5/3*2/8},55);
         $(this).children().animate({width:inwi/1.5/3*2},55);
     });
 });
@@ -109,13 +109,13 @@ $(function (){
         $(".start").hide();
         $(".game").show();
         $("body").keypress(function keyDown(data){
-            if(data.keyCode == 37){
+            if(data.keyCode === 37){
                 if(pos > 0){
                 pos -= step;
                 $(".player").css({"left":"-="+step});
                 }
             }
-            else if(data.keyCode == 39){
+            else if(data.keyCode === 39){
                 if(pos < inwi-inwi/10-2){
                 pos  += step;
                 $(".player").css({"left":"+="+step});
@@ -136,7 +136,7 @@ $(function (){
             if(delay > 10){
                 removenum += 1;
                 $(".drop"+removenum).remove();
-                if(bottomdrop.left == playerpos.left ){
+                if(bottomdrop.left === playerpos.left ){
                      if(score > highscore){
                         highscore = score;
                         $(".highscore").text("Highscore:"+score);
@@ -158,7 +158,7 @@ $(function (){
                     $(".score").text("Score:"+score);
                 }
             }
-        };
+        }
         var createdrops = setInterval(spawndadrops,intervaltime);
     });
     $(".left").click(function (){
