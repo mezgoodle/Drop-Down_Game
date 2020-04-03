@@ -1,19 +1,19 @@
-var inwi = window.innerWidth;
-var inhei = window.innerHeight ;
-var step = inwi/10-2;
-var step2 = inhei/15;
-var pos = 0 ;
-var dropnum = 0 ; 
-var delay = 0;
-var removenum = 0;
-var intervaltime = 180;//Make this number smaller to make the game harder//
-var score = 0;
-var ausgefahren = false;
-var green = new Array("44cf67","48c266","87f0a1","6abd7f","43cc65");
-var blue = new Array("8dc9f6","488ace","4595d6","1495ff","0776d1");
-var red = new Array("bf4c4c","d99797","ec3434","cc5252","e33030");
-var col = green;
-var highscore = 0;
+let inwi = window.innerWidth;
+let inhei = window.innerHeight ;
+let step = inwi/10-2;
+let step2 = inhei/15;
+let pos = 0 ;
+let dropnum = 0 ; 
+let delay = 0;
+let removenum = 0;
+let intervaltime = 180;//Make this number smaller to make the game harder//
+let score = 0;
+let ausgefahren = false;
+let green = new Array("44cf67","48c266","87f0a1","6abd7f","43cc65");
+let blue = new Array("8dc9f6","488ace","4595d6","1495ff","0776d1");
+let red = new Array("bf4c4c","d99797","ec3434","cc5252","e33030");
+let col = green;
+let highscore = 0;
 window.onload = function (){
     alert("Thank you all so for over 300 upvotes!! Never thought it would get that big!")
     $(".choosecol,.choosediff").hide();
@@ -131,7 +131,7 @@ $(function (){
             bottomdrop = drop.position();
             zuf = Math.floor(Math.random()*4);
             $(".droparea").append("<div class=drop"+dropnum+"></div>");
-            $(".drop"+dropnum).css({"position":"absolute","border":"10px solid","border-color":"#"+col[zuf],"left":playerpos.left,"top":"0px"});
+            $(".drop"+dropnum).css({"position":"absolute","border":"10px solid","border-color":"#"+col[parseFloat(zuf)],"left":playerpos.left,"top":"0px"});
             $(".droparea").children().animate({top:10*step2},intervaltime*10,"linear");
             if(delay > 10){
                 removenum += 1;
