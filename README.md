@@ -1,4 +1,4 @@
-# Drop-Down_Game-HTML
+# Drop-Down Game
 
 Game built on **pure** CSS and JS. Result you can see [here](https://mezgoodle.github.io/Drop-Down_Game-HTML/)
 
