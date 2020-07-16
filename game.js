@@ -125,11 +125,11 @@ $(function (){
         function spawndadrops(){
             dropnum +=1;
             delay += 1;
-            player = $(".player");
-            drop = $(".droparea").children();
-            playerpos = player.position();
-            bottomdrop = drop.position();
-            zuf = Math.floor(Math.random()*4);
+            let player = $(".player");
+            let drop = $(".droparea").children();
+            let playerpos = player.position();
+            let bottomdrop = drop.position();
+            let zuf = Math.floor(Math.random()*4);
             $(".droparea").append("<div class=drop"+dropnum+"></div>");
             $(".drop"+dropnum).css({"position":"absolute","border":"10px solid","border-color":"#"+col[parseFloat(zuf)],"left":playerpos.left,"top":"0px"});
             $(".droparea").children().animate({top:10*step2},intervaltime*10,"linear");
@@ -141,7 +141,7 @@ $(function (){
                         highscore = score;
                         $(".highscore").text("Highscore:"+score);
                     }
-                    lastscore = score;
+                    let lastscore = score;
                     $(".lastscore").text("Lastscore:"+score);
                     removenum = 0;
                     dropnum = 0;
